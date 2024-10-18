@@ -1,12 +1,10 @@
 import React from 'react';
 
 function Content() {
-    // const planet = "Mars";
-    const planet = "Mars";
+
     return (
         <div>
-            <h1>Hello World!!</h1>
-            <p>Greeting's people of {planet}</p>
+            <div style={{ backgroundColor: 'blue', height: '100px', width: '80px', margin: '10px' }}></div>
         </div>
     )
 }
