@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Content from './Content/Content'
 import Hero from './Hero/Hero';
+import Info from './Info/Info'
 
 function Main() {
     //get ref
@@ -9,6 +10,7 @@ function Main() {
         <div>
             <Hero refToComponent={ref}/>
             <Content ref={ref}/>
+            <Info />
         </div>
     );
 }

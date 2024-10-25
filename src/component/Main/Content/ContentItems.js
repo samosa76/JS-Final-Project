@@ -1,4 +1,4 @@
-import style from "./Content.module.css";
+import style from "./ContentItems.module.css";
 
 function ContentItems(params) {
     var desc = params.desc
