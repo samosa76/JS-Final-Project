@@ -9,15 +9,20 @@
 }
 
 .title {
-    /* Center Position Card */
+    /* Centering Card Position*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 
+    /* Cantering Card Content*/
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
 
     /* Glass Card */
-
     width: 1000px;
     height: 400px;
     background: rgba(255, 255, 255, 0.2);
@@ -26,5 +31,24 @@
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+    /* Text Attribute */
+    color: #1A1423;
 }
 
+.card {
+    text-align: center;
+    align-content: center;
+    background-color: #F8F7FF;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+}
