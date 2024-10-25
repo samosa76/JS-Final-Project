@@ -1,0 +1,14 @@
+.container {
+    text-align: center;
+    color: white;
+    background-color: #B8B8FF;
+    padding: 1rem;
+}
+
+.footer_title {
+    margin-bottom: 1rem;
+}
+
+.footer_author{
+    margin-bottom: 1rem;
+}

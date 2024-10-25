@@ -10,8 +10,9 @@ function Main() {
     }
     return (
         <main>
-            <Title name="Earth"/>
+            <Title name="Earth" detail="test"/>
             {rows}
+            
         </main>
     )
 }
