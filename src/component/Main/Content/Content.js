@@ -1,7 +1,8 @@
 import { useImperativeHandle, forwardRef, useRef } from "react";
 
 import style from "./Content.module.css"
-import Items from "./ContentItems"
+import Items from "../Item/Item"
+import data from "../../../utils/data/data_books"
 
 const Content = forwardRef((props, ref) => {
     const compRef = useRef();
@@ -10,21 +11,23 @@ const Content = forwardRef((props, ref) => {
             compRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }));
-    var data = {
-        'title': 'New Books',
-        'desc': 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio laborum quisquam harum unde nobis voluptate praesentium quos autem, odio quam ratione esse dolorum repellendus molestiae accusamus modi sequi corporis incidunt.',
-        'genre': ['Genre 1', 'Genre 2', 'Genre 3'],
-    };
-    const { title, desc, genre } = data;
+    const books = data;
 
 
     return (
         <div ref={compRef}>
             <div className={style.container}>
-                <Items title={title} desc={desc} genre={genre}/>
-                <Items title={title} desc={desc} genre={genre} />
-                <Items title={title} desc={desc} genre={genre} />
-                <Items title={title} desc={desc} genre={genre} />
+
+                <div className={style.content_title}>
+                    <h1>NEWEST BOOK</h1>
+                </div>
+
+                <div className={style.grid_container}>
+                    {books.map((book) => {
+                        return <Items book={book} />
+                    })}
+                </div>
+
             </div>
 
         </div>
