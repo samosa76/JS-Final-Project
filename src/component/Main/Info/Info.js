@@ -9,9 +9,9 @@ const Info = () => {
                 <h1>About Us</h1>
             </div>
             <div className={style.info_container}>
-                <h1>Test</h1>
-                <h1>Test2</h1>
-                <h1>Test3</h1>
+                <div className={style.about_us}></div>
+                <div className={style.about_us}></div>
+                <div className={style.about_us}></div>
             </div>
         </div>
     )

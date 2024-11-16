@@ -51,4 +51,22 @@
     color: white;
 }
 
+@media (max-width: 768px) {
+    .btn_rent {
+        width: 80px;
+        height: 40px;
+        background-color: rgb(118, 236, 118);
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+        border: none;
+    }
 
+    .btn_buy {
+        width: 80px;
+        height: 40px;
+        background-color: #91ff82;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border: none;
+    }
+}

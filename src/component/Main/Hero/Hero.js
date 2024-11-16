@@ -12,12 +12,12 @@ function Hero({ refToComponent }) {
     }
 
 
-    var url = "https://picsum.photos/id/260/1400/480/"
+    var url = "https://picsum.photos/id/260/1400/680/"
 
     return (
         <div className={style.container}>
             <div className={style.image}>
-                <img src={url} className={style.image} />
+                <img src='/images/books-background.jpg' className={style.image} />
                 <div className={`${style.title}`}>
                     <div style={{ textAlign: 'center' }}>
                         <h1>Title</h1>
