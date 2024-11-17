@@ -2,7 +2,7 @@ import { useImperativeHandle, forwardRef, useRef } from "react";
 
 import style from "./Content.module.css"
 import Items from "../Item/Item"
-import data from "../../../utils/data/data_books"
+import data from "../../utils/data/data_books"
 
 const Content = forwardRef((props, ref) => {
     const compRef = useRef();

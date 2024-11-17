@@ -1,7 +1,8 @@
 import { useRef } from "react";
-import Content from './Content/Content'
-import Hero from './Hero/Hero';
-import Info from './Info/Info'
+import Content from '../Content/Content'
+import Hero from '../Hero/Hero';
+import Author from '../Author/Author'
+import Info from '../Info/Info'
 // import Movies from "../Movies/Movies";
 
 function Main() {
@@ -10,9 +11,10 @@ function Main() {
     return(
         <div>
             <Hero refToComponent={ref}/>
+            <Info />
             <Content ref={ref}/>
             {/* <Movies /> */}
-            <Info />
+            <Author />
         </div>
     );
 }
