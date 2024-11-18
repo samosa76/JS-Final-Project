@@ -1,5 +1,4 @@
 import style from './Info.module.css'
-import Item from '../Item/Item'
 
 const Info = () => {
 
@@ -23,7 +22,7 @@ const Info = () => {
 
                 </div>
                 <div className={style.info_image}>
-                    <img src='icon/bookstore-logo.png' className={style.logo}></img>
+                    <img src='icon/bookstore-logo.png' className={style.logo} alt='logo'></img>
                 </div>
             </div>
         </div>

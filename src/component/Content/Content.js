@@ -2,16 +2,19 @@ import { useImperativeHandle, forwardRef, useRef } from "react";
 
 import style from "./Content.module.css"
 import Items from "../Item/Item"
-import data from "../../utils/data/data_books"
 
-const Content = forwardRef((props, ref) => {
+
+const Content = forwardRef((props) => {
+    //get all props
+    const {ref, books, addBooks} = props;
+
+    //scroll to ref
     const compRef = useRef();
     useImperativeHandle(ref, () => ({
         scrollIntoView: () => {
             compRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
         }
     }));
-    const books = data;
 
 
     return (
