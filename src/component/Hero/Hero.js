@@ -11,13 +11,10 @@ function Hero({ refToComponent }) {
         }
     }
 
-
-    var url = "https://picsum.photos/id/260/1400/680/"
-
     return (
         <div className={style.container}>
             <div className={style.image}>
-                <img src='/images/books-background.jpg' className={style.image} />
+                <img src='/images/books-background.jpg' className={style.image} alt="books-background"/>
                 <div className={`${style.title}`}>
                     <div style={{ textAlign: 'center' }}>
                         <h1>Title</h1>
@@ -25,7 +22,7 @@ function Hero({ refToComponent }) {
                     </div>
 
                     <div className={style.card} onClick={scrollToContent}>
-                        <img src='/icon/down-arrow.png' className={style.icon} />
+                        <img src='/icon/down-arrow.png' className={style.icon} alt="down-arrow"/>
                     </div>
                 </div>
             </div>

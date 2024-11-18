@@ -3,6 +3,7 @@ import Content from '../Content/Content'
 import Hero from '../Hero/Hero';
 import Author from '../Author/Author'
 import Info from '../Info/Info'
+import AddBooks from "../AddBooks/AddBooks";
 // import Movies from "../Movies/Movies";
 
 function Main() {
@@ -13,6 +14,7 @@ function Main() {
             <Hero refToComponent={ref}/>
             <Info />
             <Content ref={ref}/>
+            <AddBooks/>
             {/* <Movies /> */}
             <Author />
         </div>
