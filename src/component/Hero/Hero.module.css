@@ -10,32 +10,30 @@
     object-fit: cover;
 }
 
-.title {
+.absolute_center {
     /* Centering Card Position*/
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
 
+.flex_column {
     /* Cantering Card Content*/
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+}
 
-
-    /* Glass Card */
-    width: 60%;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.2);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-
+.title {
     /* Text Attribute */
-    color: #1A1423;
+    /* color: #1A1423; */
+    color: #F8F7FF;
+    text-align: center;
+}
+.title h4 {
+    margin: 16px;
 }
 
 .card {
@@ -50,11 +48,25 @@
     transition: 0.3s;
 }
 
+.glass_card {
+    /* Glass Card */
+    width: 60%;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .icon {
     width: 64px;
     height: 64px;
 }
 
 @media (max-width: 768px) {
-    
+    .glass_card {
+        width: 80%;
+    }
 }

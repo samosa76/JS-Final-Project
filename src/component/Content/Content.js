@@ -4,9 +4,9 @@ import style from "./Content.module.css"
 import Items from "../Item/Item"
 
 
-const Content = forwardRef((props) => {
+const Content = forwardRef((props, ref) => {
     //get all props
-    const {ref, books, addBooks} = props;
+    const {books} = props;
 
     //scroll to ref
     const compRef = useRef();

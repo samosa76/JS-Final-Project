@@ -8,12 +8,30 @@
     display: flex;
     flex-direction: column;
     color: #F8F7FF;
-
 }
 
-.navbar h1 {
+.nav_logo {
     font-size: 2.4rem;
     margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.logo_1 {
+    background-color: white;
+    display: inline-block;
+    color: #013159;
+    padding-left: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.logo_2 {
+    background-color: white;
+    display: inline-block;
+    color: #008ED6;
+    padding-right: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
 }
 
 .nav_list_menu {
@@ -46,10 +64,6 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-    }
-
-    .navbar_brand {
-        margin-bottom: 0px;
     }
 
     .nav_list_menu {

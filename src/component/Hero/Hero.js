@@ -15,10 +15,10 @@ function Hero({ refToComponent }) {
         <div className={style.container}>
             <div className={style.image}>
                 <img src='/images/books-background.jpg' className={style.image} alt="books-background"/>
-                <div className={`${style.title}`}>
-                    <div style={{ textAlign: 'center' }}>
-                        <h1>Title</h1>
-                        <p>Ini adalah paragraph singkat dan padat dan hanya di gunakan untuk percobaan</p>
+                <div className={`${style.flex_column} ${style.glass_card} ${style.absolute_center}`}>
+                    <div className={style.title}>
+                        <h1>Book World</h1>
+                        <h4>Selamat menjelajahi dunia literasi di Book World, <br/> dan temukan buku yang akan menginspirasi dan menemani perjalanan Anda!</h4>
                     </div>
 
                     <div className={style.card} onClick={scrollToContent}>
