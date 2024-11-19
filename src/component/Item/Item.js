@@ -23,7 +23,7 @@ function ContentItems(params) {
 
             <div>
                 <div>
-                    <img src="https://picsum.photos/seed/picsum/200/300" />
+                    <img src={`https://picsum.photos/id/${book.image}/200/300`} alt="rando-image" />
                 </div>
                 
             </div>

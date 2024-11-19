@@ -4,7 +4,7 @@ import style from './AddBooks.module.css'
 const AddBooks = (props) => {
 
     //get props
-    const {books, addBooks} = props
+    const {books, addBooks} = props;
 
     //setup text error state
     const [isTitleError, setTitleError] = useState(false);
@@ -42,7 +42,8 @@ const AddBooks = (props) => {
             
             const book = {
                 title : title,
-                desc : desc
+                desc : desc,
+                image : Math.floor(Math.random() * 100),
             }
 
             addBooks([...books, book]);

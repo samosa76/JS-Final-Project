@@ -27,6 +27,7 @@ const Content = forwardRef((props, ref) => {
 
                 <div className={style.grid_container}>
                     {books.map((book) => {
+                        
                         return <Items book={book} />
                     })}
                 </div>
