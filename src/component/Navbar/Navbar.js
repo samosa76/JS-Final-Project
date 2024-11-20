@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import style from './Navbar.module.css'
+import { Link } from 'react-router-dom';
 
 function Navbar() {
     //state for menu
@@ -7,7 +8,7 @@ function Navbar() {
 
     ////change state when toggleMenu triggered
     const toggleMenu = () => {
-        setShowMenu(!showMenu); 
+        setShowMenu(!showMenu);
     };
 
     return (
@@ -21,10 +22,18 @@ function Navbar() {
 
                 {/* showing list style by state right now */}
                 <ul className={`${style.nav_list_menu} ${showMenu ? style.show_menu : ''}`}>
-                    <li>Home</li>
-                    <li>Categories</li>
-                    <li>E-Book</li>
-                    <li>About</li>
+                    <li>
+                        <Link to="/" className={style.link}>Home</Link>
+                    </li>
+                    <li>
+                        <Link to="/Categories" className={style.link}>Categories</Link>
+                    </li>
+                    <li>
+                        <Link to="/Books" className={style.link}>E-Book</Link>
+                    </li>
+                    <li>
+                        <Link to="/About" className={style.link}>About</Link>
+                    </li>
                 </ul>
 
                 {/* adding on click for changing state */}

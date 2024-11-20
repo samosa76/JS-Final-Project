@@ -6,9 +6,7 @@ import Main from "../component/Main/Main"
 function Home() {
     return (
         <div>
-            <Navbar/>
             <Main/>
-            <Footer/>
         </div>
     )
 }

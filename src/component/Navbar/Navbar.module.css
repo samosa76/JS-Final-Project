@@ -59,6 +59,11 @@
     position: absolute;
 }
 
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
 @media(min-width: 768px) {
     .navbar {
         flex-direction: row;
