@@ -12,6 +12,8 @@ const AddBooks = (props) => {
         descError: false
     });
 
+    const {titleError, descError} = textError;
+
     
 
     //setup input state
@@ -80,11 +82,11 @@ const AddBooks = (props) => {
 
                         <label>Book Title</label>
                         <input type='text' className={style.input_form} value={title} onChange={handleChange} id='title' name='title' />
-                        {textError.titleError ? <p className={style.error_text}>Please enter book title</p> : ""}
+                        {titleError ? <p className={style.error_text}>Please enter book title</p> : ""}
 
                         <label>Book Description</label>
                         <textarea maxLength={150} type='text' className={`${style.input_form} ${style.desc}`} value={desc} onChange={handleChange} id='desc' name='desc' />
-                        {textError.descError ? <p className={style.error_text}>Please enter book desc</p> : ""}
+                        {descError ? <p className={style.error_text}>Please enter book desc</p> : ""}
 
                         <input type='submit' className={style.button_form} />
 
