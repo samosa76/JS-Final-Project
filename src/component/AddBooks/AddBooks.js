@@ -7,71 +7,49 @@ const AddBooks = (props) => {
     const { books, addBooks } = props;
 
     //setup text error state
-    const [isTitleError, setTitleError] = useState(false);
-    const [isDescError, setDescError] = useState(false);
+    const [textError, setTextError] = useState({
+        titleError: false,
+        descError: false
+    });
+
+    
 
     //setup input state
-    // const [title, setTitle] = useState('');
-    // const [desc, setDesc] = useState('');
-
     const [formData, setFormData] = useState({
         title: "",
         desc: ""
     })
 
-    const {title, desc} = formData;
-
-    function handleChange(e) {
-        const {name, value} = e.target;
-
-        setFormData({
-            ...formData,[name]:value,
-        });
+    const handleInputError = (name, isError) => {
+        setTextError(prevState => ({
+            ...prevState,
+            [name]: isError
+        }));
     }
 
-    /* handle when input value change */
-    // function handleTitle(e) {
-    //     setTitle(e.target.value);
-    // }
+    const { title, desc } = formData;
 
-    // function handleDesc(e) {
-    //     setDesc(e.target.value);
-    // }
+    function handleChange(e) {
+        const { name, value } = e.target;
 
-    // function validate() {
-    //     if (title === "") {
-    //         setTitleError(true);
-    //     }
-    //     else {
-    //         setTitleError(false);
-    //         return false;
-    //     }
-    //     if (desc === "") {
-    //         setDescError(true);
-    //     } else {
-    //         setDescError(false);
-    //         return false;
-    //     }
-    //     if (title !== "" && desc !== "") {
-
-    //         return true;
-
-    //     }
-    // }
+        setFormData({
+            ...formData, [name]: value,
+        });
+    }
 
     //handling when button submit clicked
     function handleSubmit(e) {
         e.preventDefault();
         if (title === "") {
-            setTitleError(true);
+            handleInputError("titleError", true)
         }
         else {
-            setTitleError(false);
+            handleInputError('titleError', false)
         }
         if (desc === "") {
-            setDescError(true);
+            handleInputError("descError", true)
         } else {
-            setDescError(false);
+            handleInputError("descError", false)
         }
 
         if (title !== "" && desc !== "") {
@@ -101,12 +79,12 @@ const AddBooks = (props) => {
                     <form onSubmit={handleSubmit}>
 
                         <label>Book Title</label>
-                        <input type='text' className={style.input_form} value={title} onChange={handleChange} id='title' name='title'/>
-                        {isTitleError ? <p className={style.error_text}>Please enter book title</p> : ""}
+                        <input type='text' className={style.input_form} value={title} onChange={handleChange} id='title' name='title' />
+                        {textError.titleError ? <p className={style.error_text}>Please enter book title</p> : ""}
 
                         <label>Book Description</label>
-                        <textarea maxLength={150} type='text' className={`${style.input_form} ${style.desc}`} value={desc} onChange={handleChange} id='desc' name='desc'/>
-                        {isDescError ? <p className={style.error_text}>Please enter book desc</p> : ""}
+                        <textarea maxLength={150} type='text' className={`${style.input_form} ${style.desc}`} value={desc} onChange={handleChange} id='desc' name='desc' />
+                        {textError.descError ? <p className={style.error_text}>Please enter book desc</p> : ""}
 
                         <input type='submit' className={style.button_form} />
 
