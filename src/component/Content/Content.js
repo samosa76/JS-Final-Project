@@ -7,6 +7,8 @@ import Items from "../Item/Item"
 const Content = forwardRef((props, ref) => {
     //get all props
     const {books} = props;
+    console.log(books);
+    
 
     //scroll to ref
     const compRef = useRef();
@@ -22,13 +24,13 @@ const Content = forwardRef((props, ref) => {
             <div className={style.container}>
 
                 <div className={style.content_title}>
-                    <h1>NEWEST BOOK</h1>
+                    <h1>THE BOOKS</h1>
                 </div>
 
                 <div className={style.grid_container}>
-                    {books.map((book) => {
+                    {books?.map((book, index) => {
                         
-                        return <Items book={book} />
+                        return <Items book={book.work} />
                     })}
                 </div>
 
