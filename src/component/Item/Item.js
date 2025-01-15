@@ -27,13 +27,15 @@ function ContentItems(params) {
     const { book } = params;
     // shorting description to 155 character
     // desc = desc.slice(0, 155) + "...";
+    const title = book.title;
+    const img = book.cover_id;
 
     return (
         <ContainerItem>
 
             <TitleItem>
 
-                <h2>{book.title}</h2>
+                <h2>{title}</h2>
 
                 <p>{book.desc}</p>
 
@@ -46,7 +48,7 @@ function ContentItems(params) {
 
             <div>
                 <div>
-                    <img src={`https://covers.openlibrary.org/b/id/${book.cover_id}-M.jpg`} alt="rando-image" />
+                    <img src={`https://covers.openlibrary.org/b/id/${img}-M.jpg`} alt="rando-image" />
                 </div>
 
             </div>
